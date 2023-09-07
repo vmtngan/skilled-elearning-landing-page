@@ -1,0 +1,356 @@
+:root {
+  --color-1: hsl(234, 25%, 52%);
+  --color-2: hsl(233, 54%, 16%);
+  --color-3: hsl(232, 10%, 56%);
+  --color-4: hsl(341, 92%, 62%);
+  --color-5: hsl(341, 100%, 83%);
+  --color-6: hsl(0, 0%, 100%);
+  --gradient-1: linear-gradient(hsl(13, 100%, 64%), hsl(322, 87%, 55%));
+  --gradient-1-hover: linear-gradient(
+    hsla(13, 100%, 64%, 0.5),
+    hsla(322, 87%, 55%, 0.5)
+  );
+  --gradient-2: linear-gradient(hsl(237, 100%, 64%), hsl(322, 87%, 55%));
+  --gradient-2-hover: linear-gradient(
+    hsla(237, 100%, 64%, 0.5),
+    hsla(322, 87%, 55%, 0.5)
+  );
+  --gradient-background: linear-gradient(hsl(0, 0%, 100%), hsl(234, 100%, 97%));
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf)
+    format("truetype-variations");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-3);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 343px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 689px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1110px;
+  }
+}
+
+.heading {
+  color: var(--color-2);
+  font-weight: 800;
+}
+
+.heading--xl {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.heading--m {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.heading--s {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+@media screen and (min-width: 1280px) {
+  .heading--xl {
+    font-size: 56px;
+    line-height: 71px;
+  }
+
+  .heading--m {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .heading--s {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.btn {
+  color: var(--color-6);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  border: 0;
+  border-radius: 28px;
+  padding: 10px 24px;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1280px) {
+  .btn {
+    font-size: 18px;
+    padding: 14px 32px;
+  }
+}
+
+.btn--1 {
+  background-color: var(--color-2);
+}
+
+.btn--1:hover {
+  background-color: var(--color-1);
+}
+
+.btn--2 {
+  background-image: var(--gradient-1);
+}
+
+.btn--2:hover {
+  background-image: var(--gradient-1-hover);
+}
+
+.btn--3 {
+  background-image: var(--gradient-2);
+}
+
+.btn--3:hover {
+  background-image: var(--gradient-2-hover);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 35px;
+}
+
+@media screen and (min-width: 1280px) {
+  .logo {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.logo--dark {
+  color: var(--color-2);
+}
+
+.logo--light {
+  color: var(--color-6);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header {
+    padding-top: 24px;
+  }
+}
+
+.site-footer {
+  background-color: var(--color-2);
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+@media screen and (min-width: 1280px) {
+  .site-footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.site-footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-section {
+  padding-top: 38px;
+}
+
+.hero-section__description {
+  margin-top: 26px;
+  margin-bottom: 24px;
+}
+
+.hero-section__image {
+  content: url(./assets/image-hero-mobile.png);
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 99px;
+  }
+
+  .hero-section__content {
+    max-width: 398px;
+  }
+
+  .hero-section__image {
+    content: url(./assets/image-hero-tablet.png);
+    max-width: 395px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-section {
+    padding-top: 172px;
+  }
+
+  .hero-section__content {
+    max-width: 457px;
+  }
+
+  .hero-section__description {
+    margin-top: 29px;
+    margin-bottom: 40px;
+  }
+
+  .hero-section__image {
+    content: url(./assets/image-hero-desktop.png);
+    max-width: 695px;
+  }
+}
+
+.features-section {
+  background-image: var(--gradient-background);
+  padding-bottom: 80px;
+}
+
+.features-section__heading {
+  background-image: var(--gradient-1);
+  color: var(--color-6);
+  border-radius: 10px;
+  padding: 24px 29px 32px 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-section {
+    padding-top: 200px;
+    padding-bottom: 86px;
+  }
+
+  .features-section__heading {
+    padding: 56px 21px 139px 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .features-section {
+    padding-top: 220px;
+    padding-bottom: 140px;
+  }
+
+  .features-section__heading {
+    border-radius: 15px;
+    padding: 64px 32px 138px 32px;
+  }
+}
+
+.features-section__item {
+  position: relative;
+  background-color: var(--color-6);
+  border-radius: 10px;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.04);
+  margin-top: 40px;
+  padding: 56px 29px 32px 28px;
+}
+
+.features-section__item > img {
+  position: absolute;
+  top: -24px;
+  left: 28px;
+}
+
+.features-section__description {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-section__item {
+    margin-top: 0;
+    padding: 56px 21px 32px 32px;
+  }
+
+  .features-section__item > img {
+    left: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .features-section__item {
+    border-radius: 15px;
+    padding: 64px 32px 40px 32px;
+  }
+
+  .features-section__description {
+    margin-top: 24px;
+  }
+}
+
+.features-section__link {
+  text-decoration: none;
+  color: var(--color-4);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.features-section__link:hover {
+  color: var(--color-5);
+}
+
+@media screen and (min-width: 768px) {
+  .features-section__container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 56px 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .features-section__container {
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 80px 30px;
+  }
+}
